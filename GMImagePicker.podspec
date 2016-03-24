@@ -12,22 +12,20 @@ Pod::Spec.new do |s|
 
   s.homepage     = "https://github.com/geminiwen/GMImagePicker"
   s.social_media_url = 'http://weibo.com/coffeesherk'
-
-
   s.license      = "MIT"
-
   s.author       = { "Gemini Wen" => "coffeesherk@gmail.com" }
 
   s.source       = { :git => "https://github.com/geminiwen/GMImagePicker.git", :tag => s.version.to_s }
 
-  s.source_files  = "GMImagePicker", "GMImagePicker/**/*.{h,m}"
+  s.source_files  = 'GMImagePicker/**/*.{h,m}'
  
   s.platform     = :ios, '7.0'
   s.requires_arc = true
   s.resources = "GMImagePicker/Media.xcassets/**/*.png"
-  s.resource_bundles = "GMImagePicker/*.{lproj,storyboard}"
 
-
+  s.resource_bundles = { 'GMImagePicker' => "GMImagePicker/*.{lproj,storyboard}"}
+  s.frameworks       = "Photos"
+  s.dependency "pop"
 
 
 end
