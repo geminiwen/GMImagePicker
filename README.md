@@ -31,7 +31,7 @@ This method will be called when the user finishes picking assets.
 }
 ```
 
-Implement `qb_imagePickerControllerDidCancel:` to get notified when the user hits "Cancel" button.
+Implement `gm_imagePickerControllerDidCancel:` to get notified when the user hits "Cancel" button.
 
 ```
 - (void)gm_imagePickerControllerDidCancel:(GMImagePickerController *)imagePickerController {
