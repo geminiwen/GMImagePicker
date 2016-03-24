@@ -52,11 +52,16 @@
 }
 
 - (void) setSelected:(BOOL)selected {
+    [super setSelected:selected];
     if (selected) {
         [self.checkmark setImage:[UIImage imageNamed:@"checked"]];
     } else {
         [self.checkmark setImage:[UIImage imageNamed:@"check"]];
     }
+}
+
+- (BOOL) isSelected {
+    return [super isSelected];
 }
 
 @end
