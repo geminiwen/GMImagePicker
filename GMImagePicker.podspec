@@ -3,7 +3,7 @@
 #  valid spec and to remove all comments including this before submitting the spec.
 Pod::Spec.new do |s|
   s.name         = "GMImagePicker"
-  s.version      = "0.1.1"
+  s.version      = "0.1.0"
   s.summary      = "Yet another image picker"
 
   s.description  = <<-DESC
@@ -11,17 +11,19 @@ Pod::Spec.new do |s|
                    DESC
 
   s.homepage     = "https://github.com/geminiwen/GMImagePicker"
-
+  s.social_media_url = 'http://weibo.com/coffeesherk'
 
 
   s.license      = "MIT"
 
-  s.author       = { "Gemini Wen" => "geminiwen@aliyun.com" }
+  s.author       = { "Gemini Wen" => "coffeesherk@gmail.com" }
 
-  s.source       = { :git => "https://github.com/geminiwen/GMImagePicker.git", :commit => "5aea44d1fcf6f09549146ae2f8ffe07fb378ede3" }
+  s.source       = { :git => "https://github.com/geminiwen/GMImagePicker.git", :tag => s.version.to_s }
 
   s.source_files  = "GMImagePicker", "GMImagePicker/**/*.{h,m}"
  
+  s.platform     = :ios, '7.0'
+  s.requires_arc = true
   s.resources = "GMImagePicker/Media.xcassets/**/*.png"
   s.resource_bundles = "GMImagePicker/*.{lproj,storyboard}"
 
