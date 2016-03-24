@@ -29,7 +29,6 @@
 		DAAA9C6D1CA2898800D208CA /* GMAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAA9C6A1CA2898800D208CA /* GMAssetCell.m */; };
 		DAAA9C6E1CA2898800D208CA /* GMAssetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAA9C6C1CA2898800D208CA /* GMAssetsViewController.m */; };
 		DAAA9C741CA28A9600D208CA /* GMSlomoIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAA9C731CA28A9600D208CA /* GMSlomoIconView.m */; };
-		DAAA9C771CA28AC500D208CA /* GMVideoIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAA9C761CA28AC500D208CA /* GMVideoIconView.m */; };
 		DAAA9C881CA28C3D00D208CA /* GMImagePicker.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAAA9C7C1CA28C3D00D208CA /* GMImagePicker.strings */; };
 		DAAA9C8B1CA28C3D00D208CA /* GMImagePicker.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAAA9C851CA28C3D00D208CA /* GMImagePicker.strings */; };
 		DAAA9C8E1CA28D3300D208CA /* GMCheckmarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAA9C8D1CA28D3300D208CA /* GMCheckmarkView.m */; };
@@ -95,8 +94,6 @@
 		DAAA9C6C1CA2898800D208CA /* GMAssetsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GMAssetsViewController.m; path = GMImagePicker/GMAssetsViewController.m; sourceTree = "<group>"; };
 		DAAA9C721CA28A9600D208CA /* GMSlomoIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GMSlomoIconView.h; path = GMImagePicker/GMSlomoIconView.h; sourceTree = "<group>"; };
 		DAAA9C731CA28A9600D208CA /* GMSlomoIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GMSlomoIconView.m; path = GMImagePicker/GMSlomoIconView.m; sourceTree = "<group>"; };
-		DAAA9C751CA28AC500D208CA /* GMVideoIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GMVideoIconView.h; path = GMImagePicker/GMVideoIconView.h; sourceTree = "<group>"; };
-		DAAA9C761CA28AC500D208CA /* GMVideoIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GMVideoIconView.m; path = GMImagePicker/GMVideoIconView.m; sourceTree = "<group>"; };
 		DAAA9C7D1CA28C3D00D208CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = GMImagePicker.strings; sourceTree = "<group>"; };
 		DAAA9C861CA28C3D00D208CA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = GMImagePicker.strings; sourceTree = "<group>"; };
 		DAAA9C8C1CA28D3300D208CA /* GMCheckmarkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GMCheckmarkView.h; path = GMImagePicker/GMCheckmarkView.h; sourceTree = "<group>"; };
@@ -225,8 +222,6 @@
 				DA53BF0C1CA3AC5500FEC223 /* Browser */,
 				DAAA9C7B1CA28C3D00D208CA /* en.lproj */,
 				DAAA9C841CA28C3D00D208CA /* zh-Hans.lproj */,
-				DAAA9C751CA28AC500D208CA /* GMVideoIconView.h */,
-				DAAA9C761CA28AC500D208CA /* GMVideoIconView.m */,
 				DAAA9C8C1CA28D3300D208CA /* GMCheckmarkView.h */,
 				DAAA9C8D1CA28D3300D208CA /* GMCheckmarkView.m */,
 				DAAA9C721CA28A9600D208CA /* GMSlomoIconView.h */,
@@ -465,7 +460,6 @@
 			files = (
 				DA70E7CC1CA281BA009FFDC3 /* AppDelegate.m in Sources */,
 				DA53BF191CA3ACB600FEC223 /* GMPhoto.m in Sources */,
-				DAAA9C771CA28AC500D208CA /* GMVideoIconView.m in Sources */,
 				DAAA9C8E1CA28D3300D208CA /* GMCheckmarkView.m in Sources */,
 				DA70E7D01CA281BA009FFDC3 /* main.m in Sources */,
 				DA70E7D11CA281BA009FFDC3 /* ViewController.m in Sources */,

@@ -26,7 +26,7 @@
 //    imagePickerController.delegate = self;
     imagePickerController.showsNumberOfSelectedAssets = YES;
     imagePickerController.mediaType = GMImagePickerMediaTypeImage;
-    imagePickerController.allowsMultipleSelection = YES;
+//    imagePickerController.allowsMultipleSelection = YES;
 //    imagePickerController.maximumNumberOfSelection = 9 - [self.photos count];
     
     self.window.rootViewController = imagePickerController;

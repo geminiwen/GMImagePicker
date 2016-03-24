@@ -194,7 +194,7 @@
 
 - (void) updateNavigationBarState {
     GMPhoto* photo = self.photos[_currentPhotoIndex];
-    if ([self.selectedAssets containsObject:photo.asset]) {
+    if ([self.imagePickerController.selectedAssets containsObject:photo.asset]) {
         [self.checkMarkView setSelected:YES];
     } else {
         [self.checkMarkView setSelected:NO];
@@ -226,15 +226,28 @@
 
 - (void) selectPhoto {
     GMPhoto* photo = self.photos[_currentPhotoIndex];
-    NSMutableOrderedSet *selectedAssets = self.selectedAssets;
-    if ([selectedAssets containsObject:photo.asset]) {
-        [selectedAssets removeObject:photo.asset];
-        [self.checkMarkView setSelected:NO];
+    PHAsset* asset = photo.asset;
+    GMImagePickerController *imagePickerController = self.imagePickerController;
+    if (self.imagePickerController.allowsMultipleSelection) {
+         NSMutableOrderedSet *selectedAssets = self.imagePickerController.selectedAssets;
+        if ([selectedAssets containsObject:asset]) {
+            [selectedAssets removeObject:asset];
+            [self.checkMarkView setSelected:NO];
+        } else {
+            [selectedAssets addObject:asset];
+            [self.checkMarkView setSelected:YES animated:YES];
+            
+        }
     } else {
-        [selectedAssets addObject:photo.asset];
-        [self.checkMarkView setSelected:YES animated:YES];
-
+        if ([imagePickerController.delegate respondsToSelector:@selector(gm_imagePickerController:didFinishPickingAssets:)]) {
+            [imagePickerController.delegate gm_imagePickerController:imagePickerController didFinishPickingAssets:@[asset]];
+        }
+    }
+    
+    if ([imagePickerController.delegate respondsToSelector:@selector(gm_imagePickerController:didSelectAsset:)]) {
+        [imagePickerController.delegate gm_imagePickerController:imagePickerController didSelectAsset:asset];
     }
 }
+
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "GMImagePickerController.h"
 
 @interface GMImagePickerUITests : XCTestCase
 
@@ -33,8 +34,9 @@
 }
 
 - (void)testExample {
-    // Use recording to get started writing UI tests.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    
+    
 }
 
 @end
