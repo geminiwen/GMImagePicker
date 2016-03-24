@@ -24,7 +24,8 @@
                                                       ];
     imagePickerController.numberOfColumnsInPortrait = 5;
 //    imagePickerController.delegate = self;
-    imagePickerController.mediaType = QBImagePickerMediaTypeImage;
+    imagePickerController.showsNumberOfSelectedAssets = YES;
+    imagePickerController.mediaType = GMImagePickerMediaTypeImage;
     imagePickerController.allowsMultipleSelection = YES;
 //    imagePickerController.maximumNumberOfSelection = 9 - [self.photos count];
     

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		160A97036054A01B80D85C3E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 973B7B9CD044E2CAAE5523C1 /* libPods.a */; };
+		DA53BF0B1CA38AFF00FEC223 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA53BF0A1CA38AFF00FEC223 /* Media.xcassets */; };
+		DA53BF191CA3ACB600FEC223 /* GMPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = DA53BF0E1CA3ACB600FEC223 /* GMPhoto.m */; };
+		DA53BF1A1CA3ACB600FEC223 /* GMPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = DA53BF101CA3ACB600FEC223 /* GMPhotoBrowser.m */; };
+		DA53BF1D1CA3ACB600FEC223 /* GMPhotoToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DA53BF161CA3ACB600FEC223 /* GMPhotoToolbar.m */; };
+		DA53BF1E1CA3ACB600FEC223 /* GMPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA53BF181CA3ACB600FEC223 /* GMPhotoView.m */; };
 		DA70E7AB1CA28186009FFDC3 /* GMImagePickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA70E7AA1CA28186009FFDC3 /* GMImagePickerTests.m */; };
 		DA70E7B61CA28186009FFDC3 /* GMImagePickerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA70E7B51CA28186009FFDC3 /* GMImagePickerUITests.m */; };
 		DA70E7CC1CA281BA009FFDC3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA70E7C41CA281BA009FFDC3 /* AppDelegate.m */; };
@@ -22,13 +28,9 @@
 		DAAA9C681CA2849D00D208CA /* GMAlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAA9C671CA2849D00D208CA /* GMAlbumCell.m */; };
 		DAAA9C6D1CA2898800D208CA /* GMAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAA9C6A1CA2898800D208CA /* GMAssetCell.m */; };
 		DAAA9C6E1CA2898800D208CA /* GMAssetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAA9C6C1CA2898800D208CA /* GMAssetsViewController.m */; };
-		DAAA9C711CA28A3E00D208CA /* GMVideoIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAA9C701CA28A3E00D208CA /* GMVideoIndicatorView.m */; };
 		DAAA9C741CA28A9600D208CA /* GMSlomoIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAA9C731CA28A9600D208CA /* GMSlomoIconView.m */; };
 		DAAA9C771CA28AC500D208CA /* GMVideoIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAA9C761CA28AC500D208CA /* GMVideoIconView.m */; };
-		DAAA9C871CA28C3D00D208CA /* GMImagePicker.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAAA9C791CA28C3D00D208CA /* GMImagePicker.strings */; };
 		DAAA9C881CA28C3D00D208CA /* GMImagePicker.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAAA9C7C1CA28C3D00D208CA /* GMImagePicker.strings */; };
-		DAAA9C891CA28C3D00D208CA /* GMImagePicker.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAAA9C7F1CA28C3D00D208CA /* GMImagePicker.strings */; };
-		DAAA9C8A1CA28C3D00D208CA /* GMImagePicker.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAAA9C821CA28C3D00D208CA /* GMImagePicker.strings */; };
 		DAAA9C8B1CA28C3D00D208CA /* GMImagePicker.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAAA9C851CA28C3D00D208CA /* GMImagePicker.strings */; };
 		DAAA9C8E1CA28D3300D208CA /* GMCheckmarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAA9C8D1CA28D3300D208CA /* GMCheckmarkView.m */; };
 /* End PBXBuildFile section */
@@ -51,6 +53,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		194A189959B6EB1DAB3CBFA4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		8724A9A864F0B0A6503EDEE6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		973B7B9CD044E2CAAE5523C1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA53BF0A1CA38AFF00FEC223 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = GMImagePicker/Media.xcassets; sourceTree = "<group>"; };
+		DA53BF0D1CA3ACB600FEC223 /* GMPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GMPhoto.h; path = GMImagePicker/Browser/GMPhoto.h; sourceTree = "<group>"; };
+		DA53BF0E1CA3ACB600FEC223 /* GMPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GMPhoto.m; path = GMImagePicker/Browser/GMPhoto.m; sourceTree = "<group>"; };
+		DA53BF0F1CA3ACB600FEC223 /* GMPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GMPhotoBrowser.h; path = GMImagePicker/Browser/GMPhotoBrowser.h; sourceTree = "<group>"; };
+		DA53BF101CA3ACB600FEC223 /* GMPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GMPhotoBrowser.m; path = GMImagePicker/Browser/GMPhotoBrowser.m; sourceTree = "<group>"; };
+		DA53BF151CA3ACB600FEC223 /* GMPhotoToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GMPhotoToolbar.h; path = GMImagePicker/Browser/GMPhotoToolbar.h; sourceTree = "<group>"; };
+		DA53BF161CA3ACB600FEC223 /* GMPhotoToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GMPhotoToolbar.m; path = GMImagePicker/Browser/GMPhotoToolbar.m; sourceTree = "<group>"; };
+		DA53BF171CA3ACB600FEC223 /* GMPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GMPhotoView.h; path = GMImagePicker/Browser/GMPhotoView.h; sourceTree = "<group>"; };
+		DA53BF181CA3ACB600FEC223 /* GMPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GMPhotoView.m; path = GMImagePicker/Browser/GMPhotoView.m; sourceTree = "<group>"; };
 		DA70E78A1CA28186009FFDC3 /* GMImagePicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GMImagePicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA70E7A61CA28186009FFDC3 /* GMImagePickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GMImagePickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA70E7AA1CA28186009FFDC3 /* GMImagePickerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GMImagePickerTests.m; sourceTree = "<group>"; };
@@ -79,16 +93,11 @@
 		DAAA9C6A1CA2898800D208CA /* GMAssetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GMAssetCell.m; path = GMImagePicker/GMAssetCell.m; sourceTree = "<group>"; };
 		DAAA9C6B1CA2898800D208CA /* GMAssetsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GMAssetsViewController.h; path = GMImagePicker/GMAssetsViewController.h; sourceTree = "<group>"; };
 		DAAA9C6C1CA2898800D208CA /* GMAssetsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GMAssetsViewController.m; path = GMImagePicker/GMAssetsViewController.m; sourceTree = "<group>"; };
-		DAAA9C6F1CA28A3E00D208CA /* GMVideoIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GMVideoIndicatorView.h; path = GMImagePicker/GMVideoIndicatorView.h; sourceTree = "<group>"; };
-		DAAA9C701CA28A3E00D208CA /* GMVideoIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GMVideoIndicatorView.m; path = GMImagePicker/GMVideoIndicatorView.m; sourceTree = "<group>"; };
 		DAAA9C721CA28A9600D208CA /* GMSlomoIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GMSlomoIconView.h; path = GMImagePicker/GMSlomoIconView.h; sourceTree = "<group>"; };
 		DAAA9C731CA28A9600D208CA /* GMSlomoIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GMSlomoIconView.m; path = GMImagePicker/GMSlomoIconView.m; sourceTree = "<group>"; };
 		DAAA9C751CA28AC500D208CA /* GMVideoIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GMVideoIconView.h; path = GMImagePicker/GMVideoIconView.h; sourceTree = "<group>"; };
 		DAAA9C761CA28AC500D208CA /* GMVideoIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GMVideoIconView.m; path = GMImagePicker/GMVideoIconView.m; sourceTree = "<group>"; };
-		DAAA9C7A1CA28C3D00D208CA /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = GMImagePicker.strings; sourceTree = "<group>"; };
 		DAAA9C7D1CA28C3D00D208CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = GMImagePicker.strings; sourceTree = "<group>"; };
-		DAAA9C801CA28C3D00D208CA /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = GMImagePicker.strings; sourceTree = "<group>"; };
-		DAAA9C831CA28C3D00D208CA /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = GMImagePicker.strings; sourceTree = "<group>"; };
 		DAAA9C861CA28C3D00D208CA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = GMImagePicker.strings; sourceTree = "<group>"; };
 		DAAA9C8C1CA28D3300D208CA /* GMCheckmarkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GMCheckmarkView.h; path = GMImagePicker/GMCheckmarkView.h; sourceTree = "<group>"; };
 		DAAA9C8D1CA28D3300D208CA /* GMCheckmarkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GMCheckmarkView.m; path = GMImagePicker/GMCheckmarkView.m; sourceTree = "<group>"; };
@@ -99,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				160A97036054A01B80D85C3E /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +129,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46DA0521B3BFB18B074B8498 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				973B7B9CD044E2CAAE5523C1 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA53BF0C1CA3AC5500FEC223 /* Browser */ = {
+			isa = PBXGroup;
+			children = (
+				DA53BF0D1CA3ACB600FEC223 /* GMPhoto.h */,
+				DA53BF0E1CA3ACB600FEC223 /* GMPhoto.m */,
+				DA53BF0F1CA3ACB600FEC223 /* GMPhotoBrowser.h */,
+				DA53BF101CA3ACB600FEC223 /* GMPhotoBrowser.m */,
+				DA53BF151CA3ACB600FEC223 /* GMPhotoToolbar.h */,
+				DA53BF161CA3ACB600FEC223 /* GMPhotoToolbar.m */,
+				DA53BF171CA3ACB600FEC223 /* GMPhotoView.h */,
+				DA53BF181CA3ACB600FEC223 /* GMPhotoView.m */,
+			);
+			name = Browser;
+			sourceTree = "<group>";
+		};
 		DA70E7811CA28186009FFDC3 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +160,8 @@
 				DA70E7A91CA28186009FFDC3 /* GMImagePickerTests */,
 				DA70E7B41CA28186009FFDC3 /* GMImagePickerUITests */,
 				DA70E78B1CA28186009FFDC3 /* Products */,
+				E706CD6FF58119208DDA2273 /* Pods */,
+				46DA0521B3BFB18B074B8498 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -187,10 +222,8 @@
 		DA70E7D81CA2825F009FFDC3 /* GMImagePicker */ = {
 			isa = PBXGroup;
 			children = (
-				DAAA9C781CA28C3D00D208CA /* de.lproj */,
+				DA53BF0C1CA3AC5500FEC223 /* Browser */,
 				DAAA9C7B1CA28C3D00D208CA /* en.lproj */,
-				DAAA9C7E1CA28C3D00D208CA /* es.lproj */,
-				DAAA9C811CA28C3D00D208CA /* ja.lproj */,
 				DAAA9C841CA28C3D00D208CA /* zh-Hans.lproj */,
 				DAAA9C751CA28AC500D208CA /* GMVideoIconView.h */,
 				DAAA9C761CA28AC500D208CA /* GMVideoIconView.m */,
@@ -198,8 +231,6 @@
 				DAAA9C8D1CA28D3300D208CA /* GMCheckmarkView.m */,
 				DAAA9C721CA28A9600D208CA /* GMSlomoIconView.h */,
 				DAAA9C731CA28A9600D208CA /* GMSlomoIconView.m */,
-				DAAA9C6F1CA28A3E00D208CA /* GMVideoIndicatorView.h */,
-				DAAA9C701CA28A3E00D208CA /* GMVideoIndicatorView.m */,
 				DAAA9C691CA2898800D208CA /* GMAssetCell.h */,
 				DAAA9C6A1CA2898800D208CA /* GMAssetCell.m */,
 				DAAA9C6B1CA2898800D208CA /* GMAssetsViewController.h */,
@@ -211,17 +242,9 @@
 				DAAA9C5C1CA2831200D208CA /* GMImagePickerController.m */,
 				DAAA9C631CA283E900D208CA /* GMAlbumsViewController.h */,
 				DAAA9C641CA283E900D208CA /* GMAlbumsViewController.m */,
+				DA53BF0A1CA38AFF00FEC223 /* Media.xcassets */,
 			);
 			name = GMImagePicker;
-			sourceTree = "<group>";
-		};
-		DAAA9C781CA28C3D00D208CA /* de.lproj */ = {
-			isa = PBXGroup;
-			children = (
-				DAAA9C791CA28C3D00D208CA /* GMImagePicker.strings */,
-			);
-			name = de.lproj;
-			path = GMImagePicker/de.lproj;
 			sourceTree = "<group>";
 		};
 		DAAA9C7B1CA28C3D00D208CA /* en.lproj */ = {
@@ -233,24 +256,6 @@
 			path = GMImagePicker/en.lproj;
 			sourceTree = "<group>";
 		};
-		DAAA9C7E1CA28C3D00D208CA /* es.lproj */ = {
-			isa = PBXGroup;
-			children = (
-				DAAA9C7F1CA28C3D00D208CA /* GMImagePicker.strings */,
-			);
-			name = es.lproj;
-			path = GMImagePicker/es.lproj;
-			sourceTree = "<group>";
-		};
-		DAAA9C811CA28C3D00D208CA /* ja.lproj */ = {
-			isa = PBXGroup;
-			children = (
-				DAAA9C821CA28C3D00D208CA /* GMImagePicker.strings */,
-			);
-			name = ja.lproj;
-			path = GMImagePicker/ja.lproj;
-			sourceTree = "<group>";
-		};
 		DAAA9C841CA28C3D00D208CA /* zh-Hans.lproj */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +265,15 @@
 			path = "GMImagePicker/zh-Hans.lproj";
 			sourceTree = "<group>";
 		};
+		E706CD6FF58119208DDA2273 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				194A189959B6EB1DAB3CBFA4 /* Pods.debug.xcconfig */,
+				8724A9A864F0B0A6503EDEE6 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -267,9 +281,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA70E7BA1CA28186009FFDC3 /* Build configuration list for PBXNativeTarget "GMImagePicker" */;
 			buildPhases = (
+				0B53905093C0C51DC132536A /* Check Pods Manifest.lock */,
 				DA70E7861CA28186009FFDC3 /* Sources */,
 				DA70E7871CA28186009FFDC3 /* Frameworks */,
 				DA70E7881CA28186009FFDC3 /* Resources */,
+				8BB7E213D41B532E4CEA3380 /* Embed Pods Frameworks */,
+				DDF5C5C375689D9D2E4902A2 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -367,10 +384,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAAA9C871CA28C3D00D208CA /* GMImagePicker.strings in Resources */,
-				DAAA9C8A1CA28C3D00D208CA /* GMImagePicker.strings in Resources */,
+				DA53BF0B1CA38AFF00FEC223 /* Media.xcassets in Resources */,
 				DAAA9C621CA283C800D208CA /* GMImagePicker.storyboard in Resources */,
-				DAAA9C891CA28C3D00D208CA /* GMImagePicker.strings in Resources */,
 				DA70E7D61CA281C6009FFDC3 /* LaunchScreen.storyboard in Resources */,
 				DAAA9C8B1CA28C3D00D208CA /* GMImagePicker.strings in Resources */,
 				DA70E7CD1CA281BA009FFDC3 /* Assets.xcassets in Resources */,
@@ -395,12 +410,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0B53905093C0C51DC132536A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8BB7E213D41B532E4CEA3380 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDF5C5C375689D9D2E4902A2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DA70E7861CA28186009FFDC3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				DA70E7CC1CA281BA009FFDC3 /* AppDelegate.m in Sources */,
+				DA53BF191CA3ACB600FEC223 /* GMPhoto.m in Sources */,
 				DAAA9C771CA28AC500D208CA /* GMVideoIconView.m in Sources */,
 				DAAA9C8E1CA28D3300D208CA /* GMCheckmarkView.m in Sources */,
 				DA70E7D01CA281BA009FFDC3 /* main.m in Sources */,
@@ -408,10 +472,12 @@
 				DAAA9C6E1CA2898800D208CA /* GMAssetsViewController.m in Sources */,
 				DAAA9C5D1CA2831200D208CA /* GMImagePickerController.m in Sources */,
 				DA70E7CE1CA281BA009FFDC3 /* GMImagePicker.xcdatamodeld in Sources */,
+				DA53BF1D1CA3ACB600FEC223 /* GMPhotoToolbar.m in Sources */,
+				DA53BF1E1CA3ACB600FEC223 /* GMPhotoView.m in Sources */,
 				DAAA9C741CA28A9600D208CA /* GMSlomoIconView.m in Sources */,
+				DA53BF1A1CA3ACB600FEC223 /* GMPhotoBrowser.m in Sources */,
 				DAAA9C681CA2849D00D208CA /* GMAlbumCell.m in Sources */,
 				DAAA9C651CA283E900D208CA /* GMAlbumsViewController.m in Sources */,
-				DAAA9C711CA28A3E00D208CA /* GMVideoIndicatorView.m in Sources */,
 				DAAA9C6D1CA2898800D208CA /* GMAssetCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,34 +530,10 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		DAAA9C791CA28C3D00D208CA /* GMImagePicker.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DAAA9C7A1CA28C3D00D208CA /* de */,
-			);
-			name = GMImagePicker.strings;
-			sourceTree = "<group>";
-		};
 		DAAA9C7C1CA28C3D00D208CA /* GMImagePicker.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				DAAA9C7D1CA28C3D00D208CA /* en */,
-			);
-			name = GMImagePicker.strings;
-			sourceTree = "<group>";
-		};
-		DAAA9C7F1CA28C3D00D208CA /* GMImagePicker.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DAAA9C801CA28C3D00D208CA /* es */,
-			);
-			name = GMImagePicker.strings;
-			sourceTree = "<group>";
-		};
-		DAAA9C821CA28C3D00D208CA /* GMImagePicker.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DAAA9C831CA28C3D00D208CA /* ja */,
 			);
 			name = GMImagePicker.strings;
 			sourceTree = "<group>";
@@ -593,6 +635,7 @@
 		};
 		DA70E7BB1CA28186009FFDC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 194A189959B6EB1DAB3CBFA4 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Example/Info.plist;
@@ -604,6 +647,7 @@
 		};
 		DA70E7BC1CA28186009FFDC3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8724A9A864F0B0A6503EDEE6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Example/Info.plist;

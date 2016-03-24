@@ -31,7 +31,6 @@
                                          @(PHAssetCollectionSubtypeSmartAlbumUserLibrary),
                                          @(PHAssetCollectionSubtypeAlbumMyPhotoStream),
                                          @(PHAssetCollectionSubtypeSmartAlbumPanoramas),
-                                         @(PHAssetCollectionSubtypeSmartAlbumVideos),
                                          @(PHAssetCollectionSubtypeSmartAlbumBursts)
                                          ];
         self.minimumNumberOfSelection = 1;

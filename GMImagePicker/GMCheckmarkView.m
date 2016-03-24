@@ -1,64 +1,62 @@
-//
-//  QBCheckmarkView.m
-//  QBImagePicker
-//
-//  Created by Katsuma Tanaka on 2015/04/03.
-//  Copyright (c) 2015 Katsuma Tanaka. All rights reserved.
-//
-
 #import "GMCheckmarkView.h"
+#import "POP.h"
+
+@interface GMCheckmarkView()
+@property (strong, nonatomic) UIImageView *checkmark;
+@end
 
 @implementation GMCheckmarkView
 
-- (void)awakeFromNib
-{
-    [super awakeFromNib];
-    
-    // Set default values
-    self.borderWidth = 1.0;
-    self.checkmarkLineWidth = 1.2;
-    
-    self.borderColor = [UIColor whiteColor];
-    self.bodyColor = [UIColor colorWithRed:(0 / 255.0) green:(154.0 / 255.0) blue:(97.0 / 255.0) alpha:1.0];
-    self.checkmarkColor = [UIColor whiteColor];
-    
-    // Set shadow
-    self.layer.shadowColor = [[UIColor grayColor] CGColor];
-    self.layer.shadowOffset = CGSizeMake(0, 0);
-    self.layer.shadowOpacity = 0.6;
-    self.layer.shadowRadius = 2.0;
+-(instancetype) initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self initialize];
+    }
+    return self;
+}
+
+-(instancetype) initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self initialize];
+    }
+    return self;
+}
+
+-(void) initialize {
+    self.checkmark = [[UIImageView alloc] init];
+    CGRect frame = self.bounds;
+    self.checkmark.frame = CGRectMake(CGRectGetWidth(frame) - 29, 0, 29, 29);
+    [self addSubview:self.checkmark];
+    [self.checkmark setImage:[UIImage imageNamed:@"check"]];
+}
+
+-(void) layoutSubviews {
+    [super layoutSubviews];
+   
+}
+
+- (void) setSelected:(BOOL)selected animated:(BOOL)animated {
+    [self setSelected:selected];
+    if (!animated) {
+        return;
+    }
+    if (selected) {
+        POPSpringAnimation *anim = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
+        anim.fromValue = [NSValue valueWithCGPoint:CGPointMake(0.8, 0.8)];
+        anim.toValue = [NSValue valueWithCGPoint:CGPointMake(1.0, 1.0)];
+        anim.springBounciness = 20.0f;
+        anim.springSpeed = 20.0f;
+        [self.checkmark.layer pop_addAnimation:anim forKey:@"scale"];
+    }
 }
 
 - (void) setSelected:(BOOL)selected {
-    _selected = selected;
     if (selected) {
-        self.bodyColor = [UIColor colorWithRed:(0 / 255.0) green:(154.0 / 255.0) blue:(97.0 / 255.0) alpha:1.0];
+        [self.checkmark setImage:[UIImage imageNamed:@"checked"]];
     } else {
-        self.bodyColor = [UIColor clearColor];
+        [self.checkmark setImage:[UIImage imageNamed:@"check"]];
     }
-    [self setNeedsDisplay];
-}
-
-- (void)drawRect:(CGRect)rect
-{
-    // Border
-    [self.borderColor setFill];
-    [[UIBezierPath bezierPathWithOvalInRect:self.bounds] fill];
-    
-    // Body
-    [self.bodyColor setFill];
-    [[UIBezierPath bezierPathWithOvalInRect:CGRectInset(self.bounds, self.borderWidth, self.borderWidth)] fill];
-    
-    // Checkmark
-    UIBezierPath *checkmarkPath = [UIBezierPath bezierPath];
-    checkmarkPath.lineWidth = self.checkmarkLineWidth;
-    
-    [checkmarkPath moveToPoint:CGPointMake(CGRectGetWidth(self.bounds) * (6.0 / 24.0), CGRectGetHeight(self.bounds) * (12.0 / 24.0))];
-    [checkmarkPath addLineToPoint:CGPointMake(CGRectGetWidth(self.bounds) * (10.0 / 24.0), CGRectGetHeight(self.bounds) * (16.0 / 24.0))];
-    [checkmarkPath addLineToPoint:CGPointMake(CGRectGetWidth(self.bounds) * (18.0 / 24.0), CGRectGetHeight(self.bounds) * (8.0 / 24.0))];
-    
-    [self.checkmarkColor setStroke];
-    [checkmarkPath stroke];
 }
 
 @end

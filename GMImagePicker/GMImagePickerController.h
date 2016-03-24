@@ -14,19 +14,17 @@
 @protocol GMImagePickerControllerDelegate <NSObject>
 
 @optional
-- (void)qb_imagePickerController:(GMImagePickerController *)imagePickerController didFinishPickingAssets:(NSArray *)assets;
-- (void)qb_imagePickerControllerDidCancel:(GMImagePickerController *)imagePickerController;
+- (void)gm_imagePickerController:(GMImagePickerController *)imagePickerController didFinishPickingAssets:(NSArray *)assets;
+- (void)gm_imagePickerControllerDidCancel:(GMImagePickerController *)imagePickerController;
 
-- (BOOL)qb_imagePickerController:(GMImagePickerController *)imagePickerController shouldSelectAsset:(PHAsset *)asset;
-- (void)qb_imagePickerController:(GMImagePickerController *)imagePickerController didSelectAsset:(PHAsset *)asset;
-- (void)qb_imagePickerController:(GMImagePickerController *)imagePickerController didDeselectAsset:(PHAsset *)asset;
+- (BOOL)gm_imagePickerController:(GMImagePickerController *)imagePickerController shouldSelectAsset:(PHAsset *)asset;
+- (void)gm_imagePickerController:(GMImagePickerController *)imagePickerController didSelectAsset:(PHAsset *)asset;
+- (void)gm_imagePickerController:(GMImagePickerController *)imagePickerController didDeselectAsset:(PHAsset *)asset;
 
 @end
 
-typedef NS_ENUM(NSUInteger, QBImagePickerMediaType) {
-    QBImagePickerMediaTypeAny = 0,
-    QBImagePickerMediaTypeImage,
-    QBImagePickerMediaTypeVideo
+typedef NS_ENUM(NSUInteger, GMImagePickerMediaType) {
+    GMImagePickerMediaTypeImage
 };
 
 @interface GMImagePickerController : UIViewController
@@ -36,7 +34,7 @@ typedef NS_ENUM(NSUInteger, QBImagePickerMediaType) {
 @property (nonatomic, strong, readonly) NSMutableOrderedSet *selectedAssets;
 
 @property (nonatomic, copy) NSArray *assetCollectionSubtypes;
-@property (nonatomic, assign) QBImagePickerMediaType mediaType;
+@property (nonatomic, assign) GMImagePickerMediaType mediaType;
 
 @property (nonatomic, assign) BOOL allowsMultipleSelection;
 @property (nonatomic, assign) NSUInteger minimumNumberOfSelection;

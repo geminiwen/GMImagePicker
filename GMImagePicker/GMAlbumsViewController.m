@@ -97,15 +97,15 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
 
 - (IBAction)cancel:(id)sender
 {
-//    if ([self.imagePickerController.delegate respondsToSelector:@selector(qb_imagePickerControllerDidCancel:)]) {
-//        [self.imagePickerController.delegate qb_imagePickerControllerDidCancel:self.imagePickerController];
+//    if ([self.imagePickerController.delegate respondsToSelector:@selector(DidCancel:)]) {
+//        [self.imagePickerController.delegate DidCancel:self.imagePickerController];
 //    }
 }
 
 - (IBAction)done:(id)sender
 {
-//    if ([self.imagePickerController.delegate respondsToSelector:@selector(qb_imagePickerController:didFinishPickingAssets:)]) {
-//        [self.imagePickerController.delegate qb_imagePickerController:self.imagePickerController
+//    if ([self.imagePickerController.delegate respondsToSelector:@selector(:didFinishPickingAssets:)]) {
+//        [self.imagePickerController.delegate :self.imagePickerController
 //                                               didFinishPickingAssets:self.imagePickerController.selectedAssets.array];
 //    }
 }
@@ -287,14 +287,9 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
     PHFetchOptions *options = [PHFetchOptions new];
     
     switch (self.imagePickerController.mediaType) {
-        case QBImagePickerMediaTypeImage:
+        case GMImagePickerMediaTypeImage:
             options.predicate = [NSPredicate predicateWithFormat:@"mediaType == %ld", PHAssetMediaTypeImage];
             break;
-            
-        case QBImagePickerMediaTypeVideo:
-            options.predicate = [NSPredicate predicateWithFormat:@"mediaType == %ld", PHAssetMediaTypeVideo];
-            break;
-            
         default:
             break;
     }

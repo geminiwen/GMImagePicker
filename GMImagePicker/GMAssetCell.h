@@ -1,20 +1,11 @@
-//
-//  QBAssetCell.h
-//  QBImagePicker
-//
-//  Created by Katsuma Tanaka on 2015/04/03.
-//  Copyright (c) 2015 Katsuma Tanaka. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
-#import "GMVideoIndicatorView.h"
-
+#import "GMCheckmarkView.h"
 
 @interface GMAssetCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
-@property (weak, nonatomic) IBOutlet GMVideoIndicatorView *videoIndicatorView;
+@property (weak, nonatomic) IBOutlet GMCheckmarkView *checkmark;
 
-@property (nonatomic, assign) BOOL showsOverlayViewWhenSelected;
+@property (copy, nonatomic) void (^selectBlock) (GMAssetCell *cell);
 
 @end

@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Photos-->
@@ -143,56 +144,11 @@
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0aq-fn-r9R">
                                             <rect key="frame" x="0.0" y="0.0" width="78" height="78"/>
                                         </imageView>
-                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BwJ-KE-LWZ" customClass="GMVideoIndicatorView">
-                                            <rect key="frame" x="0.0" y="58" width="78" height="20"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rKh-6o-xw7" customClass="GMVideoIconView">
-                                                    <rect key="frame" x="5" y="6" width="14" height="8"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="14" id="NjT-dW-eKX"/>
-                                                        <constraint firstAttribute="height" constant="8" id="d0g-9I-F2s"/>
-                                                    </constraints>
-                                                </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1We-cC-Ruu" customClass="GMSlomoIconView">
-                                                    <rect key="frame" x="5" y="3" width="12" height="12"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="12" id="1qd-FB-w1Q"/>
-                                                        <constraint firstAttribute="width" constant="12" id="iWE-jc-2Za"/>
-                                                    </constraints>
-                                                </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBs-FX-TZQ">
-                                                    <rect key="frame" x="23" y="3" width="50" height="15"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstAttribute="centerY" secondItem="JBs-FX-TZQ" secondAttribute="centerY" id="2In-Kf-RYP"/>
-                                                <constraint firstItem="JBs-FX-TZQ" firstAttribute="leading" secondItem="rKh-6o-xw7" secondAttribute="trailing" constant="4" id="8p9-Gp-fI0"/>
-                                                <constraint firstAttribute="centerY" secondItem="rKh-6o-xw7" secondAttribute="centerY" id="NiG-4S-82w"/>
-                                                <constraint firstAttribute="trailing" secondItem="JBs-FX-TZQ" secondAttribute="trailing" constant="5" id="UzI-el-RsC"/>
-                                                <constraint firstItem="1We-cC-Ruu" firstAttribute="leading" secondItem="rKh-6o-xw7" secondAttribute="leading" id="bXl-KW-8bH"/>
-                                                <constraint firstAttribute="height" constant="20" id="of9-Tc-hn8"/>
-                                                <constraint firstItem="rKh-6o-xw7" firstAttribute="leading" secondItem="BwJ-KE-LWZ" secondAttribute="leading" constant="5" id="wdo-1w-Evf"/>
-                                                <constraint firstItem="1We-cC-Ruu" firstAttribute="top" secondItem="rKh-6o-xw7" secondAttribute="top" constant="-3" id="wvh-r6-9Ty"/>
-                                            </constraints>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Cr-vb-lzk" customClass="GMCheckmarkView">
+                                            <rect key="frame" x="39" y="0.0" width="39" height="39"/>
                                             <connections>
-                                                <outlet property="slomoIcon" destination="1We-cC-Ruu" id="6g0-tK-SgN"/>
-                                                <outlet property="timeLabel" destination="JBs-FX-TZQ" id="MRp-1Z-69e"/>
-                                                <outlet property="videoIcon" destination="rKh-6o-xw7" id="5VY-OW-Y7V"/>
+                                                <action selector="checkmarkTouchUpInside" destination="fc0-k1-HNL" eventType="touchUpInside" id="uYE-zb-vCV"/>
                                             </connections>
-                                        </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m99-yj-HSc" customClass="GMCheckmarkView">
-                                            <rect key="frame" x="49" y="5" width="24" height="24"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="24" id="8Dq-6v-oj1"/>
-                                                <constraint firstAttribute="height" constant="24" id="bBP-zT-euh"/>
-                                            </constraints>
                                         </view>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -200,24 +156,16 @@
                                 <constraints>
                                     <constraint firstItem="0aq-fn-r9R" firstAttribute="top" secondItem="fc0-k1-HNL" secondAttribute="top" id="1Cs-Ar-v4t"/>
                                     <constraint firstAttribute="trailing" secondItem="0aq-fn-r9R" secondAttribute="trailing" id="1xm-YR-1aF"/>
+                                    <constraint firstAttribute="trailing" secondItem="7Cr-vb-lzk" secondAttribute="trailing" id="5ag-ks-Eo1"/>
                                     <constraint firstItem="0aq-fn-r9R" firstAttribute="leading" secondItem="fc0-k1-HNL" secondAttribute="leading" id="7WM-zv-4jB"/>
-                                    <constraint firstItem="BwJ-KE-LWZ" firstAttribute="top" secondItem="fc0-k1-HNL" secondAttribute="top" id="UJz-U6-yN2"/>
-                                    <constraint firstAttribute="trailing" secondItem="BwJ-KE-LWZ" secondAttribute="trailing" id="ViU-xg-jBz"/>
-                                    <constraint firstItem="BwJ-KE-LWZ" firstAttribute="leading" secondItem="fc0-k1-HNL" secondAttribute="leading" id="cOY-Et-5UE"/>
-                                    <constraint firstAttribute="trailing" secondItem="m99-yj-HSc" secondAttribute="trailing" constant="5" id="fTO-RC-TTY"/>
+                                    <constraint firstItem="7Cr-vb-lzk" firstAttribute="height" secondItem="fc0-k1-HNL" secondAttribute="height" multiplier="0.5" id="G7m-1t-Ew7"/>
+                                    <constraint firstItem="7Cr-vb-lzk" firstAttribute="width" secondItem="fc0-k1-HNL" secondAttribute="width" multiplier="0.5" id="RLD-ey-BjT"/>
+                                    <constraint firstItem="7Cr-vb-lzk" firstAttribute="top" secondItem="fc0-k1-HNL" secondAttribute="top" id="dVs-mL-I4p"/>
                                     <constraint firstAttribute="bottom" secondItem="0aq-fn-r9R" secondAttribute="bottom" id="iIA-2y-gLa"/>
-                                    <constraint firstAttribute="bottom" secondItem="BwJ-KE-LWZ" secondAttribute="bottom" id="jYP-8U-0SU"/>
-                                    <constraint firstItem="m99-yj-HSc" firstAttribute="top" secondItem="fc0-k1-HNL" secondAttribute="top" constant="5" id="z9O-zS-2Dc"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="UJz-U6-yN2"/>
-                                    </mask>
-                                </variation>
                                 <connections>
-                                    <outlet property="checkmark" destination="m99-yj-HSc" id="30H-C1-xm8"/>
+                                    <outlet property="checkmark" destination="7Cr-vb-lzk" id="YZF-zw-aBl"/>
                                     <outlet property="imageView" destination="0aq-fn-r9R" id="smK-ma-TWL"/>
-                                    <outlet property="videoIndicatorView" destination="BwJ-KE-LWZ" id="HkB-Dc-nzF"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
