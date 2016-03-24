@@ -224,9 +224,34 @@
     [self updateNavigationBarState];
 }
 
+- (BOOL)isMaximumSelectionLimitReached
+{
+    NSUInteger minimumNumberOfSelection = MAX(1, self.imagePickerController.minimumNumberOfSelection);
+    
+    if (minimumNumberOfSelection <= self.imagePickerController.maximumNumberOfSelection) {
+        return (self.imagePickerController.maximumNumberOfSelection <= self.imagePickerController.selectedAssets.count);
+    }
+    
+    return NO;
+}
+
+
+-(BOOL) shouldSelectPhoto:(PHAsset *)asset {
+    if ([self.imagePickerController.delegate respondsToSelector:@selector(gm_imagePickerController:shouldSelectAsset:)]) {
+        return [self.imagePickerController.delegate gm_imagePickerController:self.imagePickerController shouldSelectAsset:asset];
+    }
+    
+    return ![self isMaximumSelectionLimitReached];
+}
+
 - (void) selectPhoto {
     GMPhoto* photo = self.photos[_currentPhotoIndex];
     PHAsset* asset = photo.asset;
+    
+    if (![self shouldSelectPhoto:asset]) {
+        return;
+    }
+    
     GMImagePickerController *imagePickerController = self.imagePickerController;
     if (self.imagePickerController.allowsMultipleSelection) {
          NSMutableOrderedSet *selectedAssets = self.imagePickerController.selectedAssets;
