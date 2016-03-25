@@ -97,17 +97,17 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
 
 - (IBAction)cancel:(id)sender
 {
-//    if ([self.imagePickerController.delegate respondsToSelector:@selector(DidCancel:)]) {
-//        [self.imagePickerController.delegate DidCancel:self.imagePickerController];
-//    }
+    if ([self.imagePickerController.delegate respondsToSelector:@selector(gm_imagePickerControllerDidCancel:)]) {
+        [self.imagePickerController.delegate gm_imagePickerControllerDidCancel:self.imagePickerController];
+    }
 }
 
 - (IBAction)done:(id)sender
 {
-//    if ([self.imagePickerController.delegate respondsToSelector:@selector(:didFinishPickingAssets:)]) {
-//        [self.imagePickerController.delegate :self.imagePickerController
-//                                               didFinishPickingAssets:self.imagePickerController.selectedAssets.array];
-//    }
+    if ([self.imagePickerController.delegate respondsToSelector:@selector(gm_imagePickerController:didFinishPickingAssets:)]) {
+        [self.imagePickerController.delegate gm_imagePickerController:self.imagePickerController
+                                               didFinishPickingAssets:self.imagePickerController.selectedAssets.array];
+    }
 }
 
 
