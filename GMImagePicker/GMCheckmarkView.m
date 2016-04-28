@@ -24,9 +24,12 @@
 }
 
 -(void) initialize {
-    self.checkmark = [[UIImageView alloc] init];
-    CGRect frame = self.bounds;
-    self.checkmark.frame = CGRectMake(CGRectGetWidth(frame) - 29, 0, 29, 29);
+    CGRect rootB = self.bounds;
+    CGFloat checkmarkWH = 29;
+    CGFloat checkmarkX = (CGRectGetWidth(rootB) - checkmarkWH) / 2.0;
+    CGFloat checkmarkY = 0;
+    self.checkmark = [[UIImageView alloc] initWithFrame:
+                      CGRectMake(checkmarkX, checkmarkY, checkmarkWH, checkmarkWH)];
     [self addSubview:self.checkmark];
     [self.checkmark setImage:[UIImage imageNamed:@"check"]];
 }
